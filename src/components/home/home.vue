@@ -53,6 +53,7 @@
 
 <script>
 import {Toast} from 'mint-ui'
+import common from '../common.js'
 export default {
     data(){
         return{
@@ -64,7 +65,7 @@ export default {
     },
     methods:{
         getImg(){
-            var url = 'http://vue.studyit.io/api/getlunbo';
+            var url = common.testApi+'/api/getlunbo';
             this.$http.get(url).then(function(response){
                 var data = response.body;
                 if(data.status!=0){

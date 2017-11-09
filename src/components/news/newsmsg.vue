@@ -22,6 +22,7 @@
 
 <script>
 import {Toast} from 'mint-ui'
+import common from '../common.js'
 export default {
     data(){
         return{
@@ -33,7 +34,7 @@ export default {
     },
     methods:{
         geinews:function(){
-            var url = 'http://vue.studyit.io/api/getnewslist';
+            var url = common.testApi+'/api/getnewslist';
             this.$http.get(url).then(function(response){
                 if(response.body.status!=0){
                     Toast('请求信息出错')

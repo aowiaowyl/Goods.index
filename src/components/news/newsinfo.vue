@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import common from '../common.js'
 export default {
     data(){
         return {
@@ -21,7 +22,7 @@ export default {
     },
     methods:{
         getinfo:function(){
-            var url = 'http://vue.studyit.io/api/getnew/'+this.id;
+            var url = common.testApi+'/api/getnew/'+this.id;
             this.$http.get(url).then(function(response){
                 if(response.body.status!=0){
                     Toast('获取新闻详情失败')
