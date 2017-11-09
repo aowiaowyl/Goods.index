@@ -7,6 +7,7 @@ import '../static/mui/dist/css/mui.min.css'
 
 import App from './App.vue'
 import home from './components/home/home.vue'
+import newsmsg from './components/news/newsmsg.vue'
 
 Vue.use(Mint);
 Vue.use(VueRouter);
@@ -15,7 +16,8 @@ Vue.use(VueResource);
 var router = new VueRouter({
   routes:[
     {path:'/',redirect:'/home'},
-    {path:'/home',component:home}
+    {path:'/home',component:home},
+    {path:'/newsmsg',component:newsmsg}
   ]
 });
 
