@@ -80,7 +80,6 @@ export default {
 
 <style scoped>
 .mint-swipe {
-    margin-top: 40px;
     height: 300px;
     width: 100%;
 }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-header fixed title="首页"></mt-header>
+    <mt-header title="我爱我的购物商城"></mt-header>
 
     <router-view></router-view>
 
