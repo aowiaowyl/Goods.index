@@ -2,7 +2,7 @@
   <div>
       <ul class="mui-table-view">
 				<li class="mui-table-view-cell mui-media" v-for="(item,index) in list" :key='index'>
-					<a href="javascript:;">
+					<router-link :to='"/newsinfo"+item.id'>
 						<img class="mui-media-object mui-pull-left" :src="item.img_url">
 						<div class="mui-media-body">
 							{{item.title}}
@@ -10,11 +10,11 @@
 						</div>
                         <div class="news-time">
                             <div class="news-addtime">
-                                时间:{{item.add_time}}
+                                时间:{{item.add_time | datafmt('YYYY-MM-DD HH:mm:ss')}}
                             </div>
                             <p class="news-click">点击:{{item.click}}</p>
                         </div>
-					</a>
+					</router-link>
 				</li>
 			</ul>
   </div>
