@@ -5,20 +5,28 @@
             {{info.add_time | datafmt('YYYY-MM-DD')}} 浏览量:{{info.click}}    
         </span>
         <div class="newscontent" v-html="info.content"></div>
+
+        <comment :id='id'></comment>
     </div>
 </template>
 
 <script>
 import common from '../common.js'
+import comment from '../commet/comment'
+import {Toast} from 'mint-ui'
 export default {
     data(){
         return {
-            id:this.$route.params.id,
+            id:'',
             info:{}
         }
     },
     created(){
+        this.id=this.$route.params.id
         this.getinfo();
+    },
+    components:{
+        comment:comment,
     },
     methods:{
         getinfo:function(){
@@ -36,7 +44,7 @@ export default {
 
 <style scoped>
     .newsinfo {
-        padding: 5px;
+        padding: 10px;
     }
     .newstitle {    
         color:rgb(0,162,232)
@@ -47,8 +55,5 @@ export default {
     }
     .newscontent {
         margin-top: 5px;
-    }
-    p {
-        color:#333;
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mt-header title="我爱我的购物商城"></mt-header>
+    <mt-header fixed title="我爱我的购物商城"></mt-header>
 
     <router-view></router-view>
 
@@ -32,6 +32,17 @@
 
 </script>
 
-<style scoped>
+<style>
+body {
+	background-color: #fff;
+	padding: 40px 0 50px;
+}
+p {
+  color:#333;
+}
+ul {
+	margin: 0;
+	padding-left: 5px;
+}
 
 </style>

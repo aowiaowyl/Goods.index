@@ -15,10 +15,10 @@
                         </router-link>
                     </li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                        <a href="#">
+                        <router-link to="/img">
 		                    <span class="mui-icon mui-icon-email"></span>
 		                    <div class="mui-media-body">图片分享</div>
-                        </a>
+                        </router-link>
                     </li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                         <a href="#">
@@ -109,27 +109,27 @@ export default {
     height: 40px;
 }
 .mui-icon-home:before{
-    background: url('../../../static/img/1.png');
+    background: url('../../assets/img/1.png');
     background-repeat: round;
 }
 .mui-icon-email:before{
-    background: url('../../../static/img/1.png');
+    background: url('../../assets/img/1.png');
     background-repeat: round;
 }
 .mui-icon-chatbubble:before{
-    background: url('../../../static/img/2.png');
+    background: url('../../assets/img/2.png');
     background-repeat: round;
 }
 .mui-icon-location:before{
-    background: url('../../../static/img/3.png');
+    background: url('../../assets/img/3.png');
     background-repeat: round;
 }
 .mui-icon-search:before{
-    background: url('../../../static/img/4.png');
+    background: url('../../assets/img/4.png');
     background-repeat: round;
 }
 .mui-icon-phone:before{
-    background: url('../../../static/img/2.png');
+    background: url('../../assets/img/2.png');
     background-repeat: round;
 }
 </style>
