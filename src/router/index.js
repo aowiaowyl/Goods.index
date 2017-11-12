@@ -13,9 +13,9 @@ export default new Router({
   routes: [
       {path:'/',redirect:'/home'},
       {path:'/home',component:home},
-      {path:'/newsmsg',component:newsmsg},
-      {path:'/newsinfo:id',component:newsinfo},
-      {path:'/img',component:img},
-      {path:'/imginfo:id',component:imginfo}
+      {path:'/news/newsmsg',component:newsmsg},
+      {path:'/news/newsinfo:id',component:newsinfo},
+      {path:'/img/imglist',component:img},
+      {path:'/img/imginfo:id',component:imginfo}
   ]
 })

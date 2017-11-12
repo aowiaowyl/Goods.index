@@ -10,7 +10,7 @@
         </div>
         <div class="imgbox">
             <ul class="imglist">
-                <router-link :to="'/imginfo'+item.id" class="imgli" v-for='(item,index) in imgs' :key='index'>
+                <router-link :to="'/img/imginfo'+item.id" class="imgli" v-for='(item,index) in imgs' :key='index'>
                     <img v-lazy="item.img_url" :src="item.img_url">
                     <div class="imgtext">
                         <h4>{{item.title}}</h4>
@@ -52,6 +52,7 @@ export default {
             this.$http.get(url).then(function(response){
                 if(response.body.status!=0){
                     Toast('获取图片列表失败')
+                    return
                 }
                 this.imgs=response.body.message
             })

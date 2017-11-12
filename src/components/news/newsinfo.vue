@@ -12,7 +12,7 @@
 
 <script>
 import common from '../common.js'
-import comment from '../commet/comment'
+import comment from '../suncom/comment'
 import {Toast} from 'mint-ui'
 export default {
     data(){
@@ -34,6 +34,7 @@ export default {
             this.$http.get(url).then(function(response){
                 if(response.body.status!=0){
                     Toast('获取新闻详情失败')
+                    return
                 }
                 this.info=response.body.message[0];
             })
